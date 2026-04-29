@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+:root {
+  --background: #020617;
+  --foreground: #e2e8f0;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+.hero-glow {
+  background:
+    radial-gradient(circle at 10% 20%, rgb(56 189 248 / 24%), transparent 38%),
+    radial-gradient(circle at 90% 10%, rgb(168 85 247 / 18%), transparent 30%),
+    linear-gradient(135deg, rgb(2 6 23 / 97%), rgb(15 23 42 / 95%));
+}
+
+.glass-panel {
+  border: 1px solid rgb(148 163 184 / 18%);
+  background: linear-gradient(
+    160deg,
+    rgb(15 23 42 / 74%),
+    rgb(2 6 23 / 84%)
+  );
+  box-shadow:
+    0 20px 60px rgb(15 23 42 / 45%),
+    inset 0 1px 0 rgb(148 163 184 / 18%);
+  backdrop-filter: blur(8px);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 1px solid rgb(56 189 248 / 50%);
+  background: linear-gradient(120deg, rgb(6 182 212), rgb(59 130 246));
+  color: white;
+  font-weight: 600;
+  padding: 0.72rem 1.35rem;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 26px rgb(34 211 238 / 35%);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 1px solid rgb(148 163 184 / 40%);
+  color: rgb(226 232 240);
+  font-weight: 600;
+  padding: 0.72rem 1.35rem;
+  background: rgb(15 23 42 / 55%);
+  transition: background-color 160ms ease, border-color 160ms ease;
+}
+
+.btn-secondary:hover {
+  border-color: rgb(34 211 238 / 65%);
+  background: rgb(15 23 42 / 75%);
+}
+
+.skill-pill {
+  border-radius: 9999px;
+  border: 1px solid rgb(148 163 184 / 28%);
+  background: rgb(15 23 42 / 76%);
+  color: rgb(191 219 254);
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.42rem 0.74rem;
+}
+
+.timeline-item {
+  border: 1px solid rgb(148 163 184 / 24%);
+  background: linear-gradient(150deg, rgb(15 23 42 / 88%), rgb(30 41 59 / 56%));
+}
