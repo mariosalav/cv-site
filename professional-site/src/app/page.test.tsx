@@ -30,4 +30,18 @@ describe("Professional site home page", () => {
       screen.getByRole("heading", { level: 2, name: /portfolio/i }),
     ).toBeInTheDocument();
   });
+
+  it("includes a digital twin chat section", () => {
+    render(<Home />);
+
+    expect(
+      screen.getByRole("heading", { level: 2, name: /digital twin/i }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByPlaceholderText(/ask about mario's career/i),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("button", { name: /ask twin/i }),
+    ).toBeInTheDocument();
+  });
 });

@@ -1,3 +1,5 @@
+import { DigitalTwinChat } from "@/components/digital-twin-chat";
+
 export default function Home() {
   const journey = [
     {
@@ -149,6 +151,8 @@ export default function Home() {
             Portfolio Launching Soon
           </a>
         </section>
+
+        <DigitalTwinChat />
       </main>
     </div>
   );
